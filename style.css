@@ -396,7 +396,6 @@ select,
 optgroup,
 textarea {
 	font-family: 'Work Sans', sans-serif;
-	color: green;
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.5;
@@ -404,13 +403,11 @@ textarea {
 
 a, h1, h2, h3, h4, h5, h6 {
 	font-family: 'Roboto Slab', serif !important;
-	color: green !important;
 	clear: both;
 }
 
 p {
 	font-family: 'Work Sans', sans-serif;
-	color: green;
 	margin-bottom: 1.5em;
 }
 
