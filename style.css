@@ -32,6 +32,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Accessibility
 # Alignments
 # Clearings
+# Header
 # Widgets
 # Content
 	## Gloabal
@@ -405,6 +406,11 @@ textarea {
 .site-content {
 	font-size: 1.125em;
 	line-height: 1.6em;
+}
+
+.site-description {
+	font-family: 'Roboto Slab', serif;
+	font-size: 1.8em;
 }
 
 a, h1, h2, h3, h4, h5, h6 {
@@ -838,6 +844,41 @@ a:hover, a:active {
 }
 
 /*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
+.site-navigation{
+	background-color: #ffff;
+}
+
+.site-title {
+	padding: 0.6em 0em 0.6em;
+	background-color: #4E0634;
+	font-family: 'Roboto Slab', serif;
+	color: #ffff;
+	margin-bottom: 0px;
+}
+.site-title a {
+	text-decoration: none;
+	color: inherit;
+}
+/*--- focus is for none mouse hover screens ---*/
+.site-title a:hover,
+.site-title a:focus {
+	text-decoration: underline;
+}
+
+@media screen and (max-width: 30em) {
+	.site-title {
+		font-size: 2em;
+	}
+}
+
+.site-branding {
+	text-align: center;
+}
+
+/*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
 .widget {
@@ -852,6 +893,35 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
+.site-content {
+	text-align: center;
+	background-size: cover;
+	height: 700px;
+}
+
+.site-description {
+	margin-top: 70px;
+	margin-bottom: 0.1em;
+	color: #ffff;
+}
+
+.site-description-button {
+	font-size: 1.0em;
+	border-radius: 2em;
+	border-color: rgba(111,111,111,0.2) transparent transparent;
+	background-color: #1D6CFF;
+	color: #ffff;
+	padding: 0.6em 0.9em 0.6em;
+}
+
+.site-decoration-text {
+	font-size: 0.8em;
+	line-height: 1.3;
+	margin-top: 0px;
+	padding: 0em 0.6em 0em;
+	color: #ffff;
+}
+
 /*--------------------------------------------------------------
 ## Gloabal
 --------------------------------------------------------------*/
@@ -876,10 +946,10 @@ a:hover, a:active {
 	}
 }
 
-@media screen and (min-width: 57em) {
+@media screen and (min-width: 90em) {
 	.site-main{
 		max-width: 70em;
-		margin: 1.8em auto;
+		margin: 2.5em auto ;
 	}
 }
 
