@@ -124,9 +124,15 @@ function custombooths_scripts() {
 
 	// Add Google Fonts: Roboto Slab and Work Sans
 	//wp_enqueue_style( 'custombooths-google-fonts','https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Work+Sans:400,700');
+	wp_enqueue_style( 'custombooths-fontawesome','https://use.fontawesome.com/releases/v5.1.1/css/all.css' );
+
 	wp_enqueue_style( 'custombooths-local-fonts', get_template_directory_uri() . '/fonts/custom-fonts.css' );
 
-	wp_enqueue_script( 'custombooths-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'custombooths-navigation', get_template_directory_uri() . '/js/navigation.js', array( 'jquery' ), '20151215', true );
+	wp_localize_script( 'custombooths-navigation', 'screenReaderText', array(
+		'expand'   => '<span class="screen-reader-text">' . __( 'expand child menu', 'custombooths' ) . '</span>',
+		'collapse' => '<span class="screen-reader-text">' . __( 'collapse child menu', 'custombooths' ) . '</span>',
+	) );
 
 	wp_enqueue_script( 'custombooths-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 

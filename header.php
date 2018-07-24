@@ -16,6 +16,8 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+
 
 	<?php wp_head(); ?>
 </head>
@@ -26,16 +28,23 @@
 
 		<header id="masthead" class="site-header">
 			<div class="site-branding">
-				<nav id="site-navigation" class="main-navigation">
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'custombooths' ); ?></button>
-					<?php
-					wp_nav_menu( array(
-						'theme_location' => 'menu-1',
-						'menu_id'        => 'primary-menu',
-					) );
-					?>
-				</nav><!-- #site-navigation -->
+
+				<nav class="navbar navbar-expand-lg navbar-light bg-light">
+ <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+	 <span class="navbar-toggler-icon"></span>
+ </button>
+ <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+	 <?php
+	 					wp_nav_menu( array(
+	 						'theme_location' => 'primary',
+	 						'menu_id'        => 'primary-menu',
+	 						'menu_class' 		 => 'nav-menu',
+	 					) );
+	 					?>
+ </div>
+</nav><!-- #site-navigation -->
 				<?php
+
 				the_custom_logo();
 				if ( is_front_page() && is_home() ) :
 					?>
