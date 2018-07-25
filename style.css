@@ -661,23 +661,50 @@ a:hover, a:active {
 ## Menus
 --------------------------------------------------------------*/
 
-
-.nav-menu ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	padding-left: 1em;
-	display: block;
-
+/*--- Small screens ---*/
+@media screen and (max-width: 766px) {
+	.navbar-nav {
+		margin: 0px;
+	}
+	.menu-item {
+		margin-top: 0px;
+		margin-bottom: 0px;
+	}
+	.nav-link {
+		margin-top: 0px;
+	}
+	.navbar-test {
+		text-align: left;
+	}
+	.dropdown-menu {
+		background-color: transparent;
+		border: 0px;
+		border-bottom: 2px solid;
+		padding-top: 0px;
+		padding-bottom: 0px;
+		margin-top: 0px;
+	}
+	.dropdown-item {
+		margin-top: 10px;
+	}
 }
 
-.nav-menu li {
-	display: list-item;
-	text-align: left;
+
+/*----- Ipad & Larger screens -----*/
+@media screen and (min-width: 767px) {
+
+		.navbar-test {
+			clear: both;
+	     text-align: center;
+			 margin-right: auto;
+	  margin-left: auto;
+		}
+		.navbar-nav {
+			margin-left: 0px;
+		}
 }
-.nav-menu a {
-	margin: 0px;
-}
+
+
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -883,9 +910,6 @@ a:hover, a:active {
 		max-width: 70em;
 		margin: 2.5em auto ;
 	}
-}
-
-
 }
 
 /*--------------------------------------------------------------

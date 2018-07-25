@@ -24,25 +24,34 @@
 
 <body <?php body_class(); ?>>
 	<div id="page" class="site">
-		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'custombooths' ); ?></a>
-
+<!-- <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'custombooths' ); ?></a>
+	-->
 		<header id="masthead" class="site-header">
 			<div class="site-branding">
 
-				<nav class="navbar navbar-expand-lg navbar-light bg-light">
- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-	 <span class="navbar-toggler-icon"></span>
- </button>
- <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-	 <?php
-	 					wp_nav_menu( array(
-	 						'theme_location' => 'primary',
-	 						'menu_id'        => 'primary-menu',
-	 						'menu_class' 		 => 'nav-menu',
-	 					) );
-	 					?>
- </div>
-</nav><!-- #site-navigation -->
+				<nav class="navbar navbar-expand-md navbar-light bg-light" role="navigation">
+				  <div class="navbar-test">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+						<?php
+						wp_nav_menu( array(
+							'theme_location'    => 'menu-1',
+							'menu_id'						=> 'primary-menu','menuclass' => 'nav-menu',
+							'depth'             => 2,
+							'container'         => 'div',
+							'container_class'   => 'collapse navbar-collapse',
+							'container_id'      => 'bs-example-navbar-collapse-1',
+							'menu_class'        => 'nav navbar-nav',
+							'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+							'walker'            => new WP_Bootstrap_Navwalker(),
+						) );
+						?>
+					</div>
+				</nav>
+
+
 				<?php
 
 				the_custom_logo();

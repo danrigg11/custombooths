@@ -128,11 +128,26 @@ function custombooths_scripts() {
 
 	wp_enqueue_style( 'custombooths-local-fonts', get_template_directory_uri() . '/fonts/custom-fonts.css' );
 
-	wp_enqueue_script( 'custombooths-navigation', get_template_directory_uri() . '/js/navigation.js', array( 'jquery' ), '20151215', true );
-	wp_localize_script( 'custombooths-navigation', 'screenReaderText', array(
-		'expand'   => '<span class="screen-reader-text">' . __( 'expand child menu', 'custombooths' ) . '</span>',
-		'collapse' => '<span class="screen-reader-text">' . __( 'collapse child menu', 'custombooths' ) . '</span>',
-	) );
+	// Register Custom Navigation Walker
+	require_once get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	wp_enqueue_script( 'custombooths-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
