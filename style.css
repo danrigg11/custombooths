@@ -404,6 +404,45 @@ textarea {
 	line-height: 1.5;
 }
 
+.author a:hover,
+.author a:focus,
+.entry-title a:hover,
+.entry-title a:focus,
+.nav-previous a:hover,
+.nav-previous a:focus,
+.nav-next a:hover,
+.nav-next a:focus,
+.posted-on a:hover,
+.posted-on a:focus,
+.comment-metadata a:hover,
+.comment-metadata a:focus,
+.entry-content a:hover,
+.entry-content a:focus,
+.entry-footer a:hover,
+.entry-footer a:focus {
+	color: #fff;
+	text-decoration: none;
+}
+
+.posted-on a,
+.comment-metadata a,
+.author a,
+.entry-title a,
+.nav-previous a,
+.nav-next a,
+.entry-content a,
+.entry-footer a {
+	color: #fff;
+	text-decoration: underline;
+}
+
+.post-edit-link,
+.comments-link,
+.cat-links,
+.tags-links {
+	margin-right: 0.4em;
+}
+
 .site-content {
 	color: #fff;
 	font-size: 1.125em;
@@ -423,27 +462,28 @@ textarea {
 	margin-top: 0px;
 }
 .widget-area {
-	color: #424242;
+	color: #D2C9CD;
 }
 .widget-title {
 	color: #fff;
 	margin-left: 0.2em;
 }
-.widget_pages a{
+.widget a {
 	color: #D2C9CD;
 	font-size: 0.8em;
 }
-.widget_pages a:hover{
+.widget a:hover,
+.widget a:focus {
 	color: #D2C9CD;
 	font-size: 0.8em;
 	text-decoration: underline;
 }
-.widget_pages ul {
+.widget ul {
 	list-style: none;
 	margin-left: 0px;
 	padding-left: 0px;
 }
-.widget_pages li {
+.widget li {
 	margin-left: 0.5em;
 }
 
@@ -504,8 +544,9 @@ abbr, acronym {
 }
 
 mark, ins {
-	background: #fff9c0;
+	background: #fff;
 	text-decoration: none;
+	color: #000;
 }
 
 big {
@@ -539,7 +580,7 @@ hr {
 }
 
 ul, ol {
-	margin: 0 0 1.5em 3em;
+	margin: 0 0 1.5em 1.2em;
 }
 
 ul {
@@ -589,10 +630,10 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
 	border: 3px solid;
-	border-color: #000;
+	border-color: #fff;
 	border-radius: 0;
 	background: #000;
-	color: #000;
+	color: #fff;
 	font-family: 'Work Sans', sans-serif;
 	font-size: 12px;
 	font-size: 0.75rem;
@@ -669,6 +710,10 @@ textarea {
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
+.navigation {
+	margin-left: 1em;
+}
+
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
@@ -676,9 +721,9 @@ textarea {
 	color: royalblue;
 } */
 
-a:visited {
+/* a:visited {
 	color: purple;
-}
+} */
 
 a:hover, a:focus, a:active {
 	color: midnightblue;
@@ -698,6 +743,9 @@ a:hover, a:active {
 
 /*--- Small screens ---*/
 @media screen and (max-width: 766px) {
+	.navbar-collapse {
+		margin-top: 3em;
+		}
 	.navbar-nav {
 		margin: 0px;
 	}
@@ -845,6 +893,10 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
+.page-title{
+	margin-left: 1em;
+}
+
 .site-navigation{
 	background-color: #ffff;
 }
@@ -924,6 +976,11 @@ a:hover, a:active {
 	margin-bottom: 0px;
 	}
 
+.search-form {
+	padding-left: 1em;
+	padding-top: 1em;
+}
+
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
@@ -931,19 +988,26 @@ a:hover, a:active {
 .site-main {
 	margin-left: 0px;
 	background-color: #000;
-	}
-.entry-header {
-	margin-left: 3em;
 }
+
+.entry-header {
+	margin-left: 1em;
+}
+.entry-footer {
+	margin-left: 1em;
+}
+
 .site-content {
 	background-color: #000;
 	text-align: center;
 	background-size: cover;
 	height: 0px;
 }
+
 .content-area {
 	background-color: #000;
 }
+
 .site-description {
 	margin-top: 70px;
 	margin-bottom: 0.1em;
@@ -1017,7 +1081,7 @@ a:hover, a:active {
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+	margin: 1.5em 1em 0;
 }
 
 .page-links {
