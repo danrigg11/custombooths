@@ -22,6 +22,7 @@
 				?>
 			</a>
 			<span class="sep"> | </span>
+			<br>
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
 				printf( esc_html__( 'Theme: %1$s by %2$s.', 'custombooths' ), 'custombooths', '<a href="http://danielrigg.info">Daniel Rigg</a>' );

@@ -22,7 +22,7 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+
 	<div id="page" class="site">
 <!-- <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'custombooths' ); ?></a>
 	-->
@@ -30,11 +30,15 @@
 			<div class="site-branding">
 
 				<nav class="navbar navbar-expand-md navbar-light bg-light" role="navigation">
-				  <div class="navbar-test">
+				  <div class="navbar-test text-center">
 					<!-- Brand and toggle get grouped for better mobile display -->
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
 					</button>
+
+						<i class="fas fa-user-astronaut fa-3x"></i>
+
+
 						<?php
 						wp_nav_menu( array(
 							'theme_location'    => 'menu-1',
@@ -72,9 +76,7 @@
 				</div><!-- .site-branding -->
 
 			</header><!-- #masthead -->
+<body <?php body_class(); ?>>
+			<div id="content" class="site-content" >
 
-			<div id="content" class="site-content" style="background-image: url(<?php header_image(); ?>)">
-				<strong><p class="site-description" ><?php echo $custombooths_description; /* WPCS: xss ok. */ ?></p></strong>
-				<p class="site-decoration-text">choose from a range of pre-built packages for all events and parties or buil your own.</p>
-				<button class="site-description-button">packages</button>
 			</div>

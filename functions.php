@@ -124,27 +124,13 @@ function custombooths_scripts() {
 
 	// Add Google Fonts: Roboto Slab and Work Sans
 	//wp_enqueue_style( 'custombooths-google-fonts','https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Work+Sans:400,700');
-	wp_enqueue_style( 'custombooths-fontawesome','https://use.fontawesome.com/releases/v5.1.1/css/all.css' );
+	//wp_enqueue_style( 'custombooths-fontawesome', get_template_directory_uri() . '/css/fontawesome.min.css' );
+	wp_enqueue_style( 'custombooths-local-fontawesome','https://use.fontawesome.com/releases/v5.1.1/css/all.css' ); /* 5.1 */
 
 	wp_enqueue_style( 'custombooths-local-fonts', get_template_directory_uri() . '/fonts/custom-fonts.css' );
 
 	// Register Custom Navigation Walker
 	require_once get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
