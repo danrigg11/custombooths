@@ -1061,7 +1061,7 @@ a:hover, a:active {
 /*---- Screen Margin Responsive ----*/
 @media screen and (min-width: 30em) {
 	.site-main{
-		
+
 		padding-bottom: 1em;
 		margin-bottom: 0px;
 	}
@@ -1109,6 +1109,30 @@ a:hover, a:active {
 
 .bypostauthor {
 	display: block;
+}
+.comment-respond {
+	margin-left: 1em;
+	margin-right: 1em;
+}
+.comments-title {
+	margin-left: 0.6em;
+	margin-right: 0.6em;
+	margin-top: 0.3em;
+}
+.comment-list {
+	padding-left: 10px;
+}
+.reply {
+	margin-right: 2em;
+	margin-bottom: 0.6em;
+	border-bottom: 2px solid;
+}
+.comment-reply-link:hover,
+.comment-reply-link:focus,
+.fn a:hover,
+.fn a:focus,
+.logged-in-as a:hover {
+	color: #007bff;
 }
 
 /*--------------------------------------------------------------
