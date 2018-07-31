@@ -552,10 +552,9 @@ big {
 	font-size: 125%;
 }
 /*----- Ipad Pro & Larger screens -----*/
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
 	.nav a {
 		font-size: 20px;
-		font-weight:bolder;
 		color: #000 !important;
 	}
 }
@@ -1069,7 +1068,7 @@ a:hover, a:active {
 
 @media screen and (min-width: 90em) {
 	.site-main {
-		max-width: 70em;
+		max-width: 130em;
 		margin: 0 auto ;
 	}
 }
